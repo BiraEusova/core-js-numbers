@@ -325,11 +325,12 @@ function getSumOfDigits(num) {
  */
 function isPowerOfTwo(num) {
   let power = 0;
-  while (true) {
+  while (2 ** power <= num) {
     if (2 ** power === num) return true;
     if (2 ** power > num) return false;
     power += 1;
   }
+  return false;
 }
 
 /**
